@@ -1,0 +1,79 @@
+body {
+    background-color: #454D6B;
+}
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(100, 149, 237, 0.75);
+    border-radius: 10px;
+}
+
+.card > h2 {
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 42px;
+    color: #FFFFFF;
+    text-shadow: 
+               -1px -1px 0px #000, 
+               -1px 1px 0px #000,                    
+                1px -1px 0px #000,                  
+                1px 0px 0px #000; 
+}
+
+.card > input {
+    width: 70%;
+    padding: 10px;
+    background: #FFFFFF;
+    border: 1px solid #454D6B;
+    border-radius: 10px;
+}
+
+.card > button {
+    padding: 8px 25px;
+    color: #FFFFFF;
+    background-color: #5C5D8D;
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.entrar {
+    margin-top: 60px;
+    margin-bottom: 90px;
+    width: 80%;
+    height: 240px;
+    max-width: 335px; 
+    height: 306px
+}
+
+.cadastro {
+    width: 80%;
+    max-width: 335px; 
+    height: 400px
+}
+
+@media (min-width: 768px) {
+    html {
+        height: 100%;
+    }
+    body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    main {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+}
