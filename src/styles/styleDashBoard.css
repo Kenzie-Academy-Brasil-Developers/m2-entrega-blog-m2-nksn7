@@ -1,0 +1,98 @@
+body{
+    background: #454D6B;
+}
+
+header{
+    background-color: #6495ED;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    width: 100%;
+}
+
+.user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 177px;
+    margin-left: 20px;
+}
+
+button{
+    width: 128px;
+    height: 38px;
+    margin-right: 20px;
+    background: #5C5D8D;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ECF0F1;
+    border: none;
+}
+
+.user img{
+    width: 68px;
+    height: 66px;
+    margin-right: 9px;
+}
+
+.user p{
+    max-width: 109px;
+    max-height: 24px;
+    overflow: hidden;
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-shadow: 
+               -1px -1px 0px #000000, 
+               -1px 1px 0px #000000,                    
+                1px -1px 0px #000000,                  
+                1px 0px 0px #000000;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.createPost{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 60px 0;
+}
+
+.createPost input{
+    width: 381px;
+    height: 108.98px;
+    left: 20px;
+    top: 122px;
+    background: #ECF0F1;
+    border-radius: 20px;
+    border: none;
+}
+
+.createPost button{
+    background: #5C5D8D;
+    border-radius: 20px;
+    width: 75px;
+    height: 33px;
+    color: #ECF0F1;
+}
+
+.posts{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.userLogado, .othersUsers{
+    background: #ECF0F1;
+    border-radius: 20px;
+    width: 381px;
+}
