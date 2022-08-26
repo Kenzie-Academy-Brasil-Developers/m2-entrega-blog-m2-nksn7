@@ -1,11 +1,11 @@
-import Api from "./api.js"
+import Api from "./script.js"
 
 class Cadastro {
 
     static cadastrandoCliente() {
         let btnCadastrar = document.getElementById("btnCadastrar")
-        let retorno = 0
-        btnCadastrar.addEventListener("click", (e) => {
+        
+        btnCadastrar.addEventListener("click", async (e) => {
             e.preventDefault()
 
             let username = document.querySelector(".username")
@@ -19,19 +19,16 @@ class Cadastro {
                 "avatarUrl": `${avatarUrl.value}`,
                 "password": `${password.value}`,
             })
-            retorno = data
+            
             username.value = ""
             email.value = ""
             avatarUrl.value = ""
             password.value = ""
-            Api.cadastrarCliente(retorno)
-            console.log(retorno)
+            await Api.cadastrarCliente(data)
+            console.log(data)
         })
-        return retorno
     }
 
 }
 
 Cadastro.cadastrandoCliente()
-
-export default Cadastro

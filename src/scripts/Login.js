@@ -1,30 +1,31 @@
-import Api from "./script"
+import Api from "./script.js"
 
 class Login {
     static renderLogin() {
         const token = localStorage.getItem("@Blog_M2:token")
 
         if(token) {
-            window.location.assign("./src/dashBoard/dashBoard.html")
+            window.location.assign("src/dashBoard/dashBoard.html")
         }
 
         const emailInput = document.getElementById("email_Login")
         const passwordInput = document.getElementById("senha_Login")
         const btnEntrar = document.getElementById("btn_entrar")
-        let retorno = 0
 
-        btnEntrar.addEventListener("click", (event) => {
+        btnEntrar.addEventListener("click", async (event) => {
             event.preventDefault()
 
-            const data = {
+            const data = JSON.stringify({
                 "email": emailInput.value,
                 "password": passwordInput.value
-            }
-            retorno = data
+            })
+            
             emailInput.value = ""
             passwordInput.value = ""
-            Api.loginClientes(retorno)
+            console.log(data)
+            await Api.loginClientes(data)
         })
-        return retorno
     }
 }
+
+Login.renderLogin()

@@ -1,8 +1,11 @@
-import Login from "./Login.js"
 class Api {
     
     static baseUrl = "https://blog-m2.herokuapp.com"
-    static headers = {"Content-Type": "application/json"}
+    static token = localStorage.getItem('@Blog_M2:token')
+    static headers = {
+        "Content-Type": "application/json", 
+        Authorization: `Bearer: ${this.token}`             
+        }
     static async listarClientes(){
         // const listaDeClientes = await fetch("https://atividade-api-clientes.herokuapp.com/clientes")
         // .then((response) => response.json())
@@ -13,15 +16,16 @@ class Api {
     }
 
     static async loginClientes(body){
-        const userLogin = await fetch(`${baseUrl}/users/login`,{
+        const userLogin = await fetch(`${this.baseUrl}/users/login`,{
             method: "POST",
-            headers: headers,
+            headers: this.headers,
             body: body
           })
           .then(res => res.json())
           .then(res => {
             localStorage.setItem("@Blog_M2:token", res.token)
             localStorage.setItem("@Blog_M2:User_id", res.userId)
+            window.location.assign('src/dashBoard/dashBoard.html')
           })
           .catch(err => console.log(err))
       
@@ -29,13 +33,17 @@ class Api {
     }
 
     static async cadastrarCliente(body){
-        const cliente = await fetch(`${baseUrl}/users/register`, {
+        const cliente = await fetch(`${this.baseUrl}/users/register`, {
             method: "POST",
-            headers: headers,
+            headers: this.headers,
             body: body
           })
           .then(res => res.json())
-          .then(res => res)
+          .then(res => {
+            console.log(res)
+            /* localStorage.setItem("@Blog_M2:token", res.token)
+            localStorage.setItem("@Blog_M2:User_id", res.userId) */
+          })
           .catch(err => console.log(err))
       
           return cliente
@@ -60,5 +68,4 @@ class Api {
 
 }
 
-Login.renderLogin()
 export default Api
