@@ -40,8 +40,8 @@ button{
 }
 
 .user p{
-    max-width: 109px;
-    max-height: 24px;
+    width: 109px;
+    height: 24px;
     line-height: 24px;
     overflow: hidden;
     font-weight: 700;
@@ -171,4 +171,39 @@ main{
     line-height: 24px;
     color: #363457;
     padding-left: 20px;
+ }
+
+
+ @media (min-width: 1024px){
+    .user{
+        width: 300px;
+        margin-left: 128px;
+    }
+    .user p{
+        width: 160px;
+        overflow: visible;
+    }
+
+    button{
+        width: 152px;
+        margin-right: 128px;
+    }
+
+    .createPost{
+        margin: 74px 0 98px 0;
+    }
+
+    .createPost input{
+        width: 746px;
+        height: 127px;
+    }
+
+    .createPost button::before{
+        content: "Postar";
+    }
+
+    .userLogado, .othersUsers{
+        width: 746px;
+        height: 231px;
+    }
  }
