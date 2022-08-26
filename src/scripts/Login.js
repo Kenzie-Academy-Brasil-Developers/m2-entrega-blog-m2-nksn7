@@ -22,7 +22,6 @@ class Login {
             
             emailInput.value = ""
             passwordInput.value = ""
-            console.log(data)
             await Api.loginClientes(data)
         })
     }

@@ -1,3 +1,4 @@
+import Logout from "./Logout.js"
 class Api {
     
     static baseUrl = "https://blog-m2.herokuapp.com"
@@ -39,26 +40,22 @@ class Api {
             body: body
           })
           .then(res => res.json())
-          .then(res => {
-            console.log(res)
-            /* localStorage.setItem("@Blog_M2:token", res.token)
-            localStorage.setItem("@Blog_M2:User_id", res.userId) */
-          })
+          .then(res =>  res)
           .catch(err => console.log(err))
       
           return cliente
     }
 
     static async editarCliente(id, body){
-        // const clienteEditado = await fetch(`https://atividade-api-clientes.herokuapp.com/clientes/${id}`, {
-        //     method: "PATCH",
-        //     headers: {"Content-Type": "application/json"},
-        //     body: body
-        // })
-        // .then(res => res.json())
-        // .catch(err => console.log(err))
+        const clienteEditado = await fetch(`${this.baseUrl}/posts/${id}`, {
+            method: "PATCH",
+            headers: {"Content-Type": "application/json"},
+            body: body
+        })
+        .then(res => res.json())
+        .catch(err => console.log(err))
     
-        // return clienteEditado
+        return clienteEditado
         
     }
 
