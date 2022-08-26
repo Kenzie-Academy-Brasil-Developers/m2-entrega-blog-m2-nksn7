@@ -42,6 +42,7 @@ button{
 .user p{
     max-width: 109px;
     max-height: 24px;
+    line-height: 24px;
     overflow: hidden;
     font-weight: 700;
     font-size: 20px;
@@ -81,6 +82,9 @@ main{
     width: 75px;
     height: 33px;
     color: #ECF0F1;
+    position: absolute;
+    top: 195.36px;
+    right: 5px;
 }
 
 .posts{
@@ -89,10 +93,82 @@ main{
     flex-direction: column;
     align-items: center;
     gap: 32px;
+    margin-bottom: 20px;
 }
 
-.userLogado, .othersUsers{
+.userLogado{
     background: #ECF0F1;
     border-radius: 20px;
     width: 381px;
+    height: 364px;
 }
+
+.othersUsers{
+    background: #ECF0F1;
+    border-radius: 20px;
+    width: 381px;
+    height: 312px;
+}
+
+.usuarioPost{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 0 16px 0;
+}
+
+.usuarioPost img{
+    width: 69px;
+    height: 69px;
+}
+
+.usuarioPost h2{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #030000;
+}
+
+.postContent{
+    margin: 0 11px 28px 20px;
+    color: #363457;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.date{
+    margin-left: 148px;
+    width: 102.7px;
+    height: 18px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #363457;
+}
+
+.userEdit{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 13px;
+    margin-top: 28px;
+}
+
+.userEdit img{
+    width: 43.12px;
+    height: 42px;
+}
+
+.userEdit img:first-child{
+    height: 46px;
+    width: 48.27px;
+}
+
+::-webkit-input-placeholder{ 
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #363457;
+    padding-left: 20px;
+ }
