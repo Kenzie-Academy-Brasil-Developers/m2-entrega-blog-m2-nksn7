@@ -65,7 +65,11 @@ class Api {
     }
 
     static async deletarCliente(id){
-
+      await fetch(`${this.baseUrl}posts/${id}`, {
+        method: "DELETE",
+        headers: {"Content-Type": "application/json"}
+    })
+    .catch(err => console.log(err))
     }
 
 }
