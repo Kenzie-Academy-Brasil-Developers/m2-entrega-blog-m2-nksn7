@@ -110,26 +110,22 @@ main{
     height: 312px;
 }
 
-.usuarioPost{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5px 0 16px 0;
-}
-
-.usuarioPost img{
+.userLogado > img, .othersUsers > img{
+    margin: 13px 144.88px 0 155.7px;
     width: 69px;
     height: 69px;
 }
 
-.usuarioPost h2{
+.postContent > h2, .postContent > h2 {
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
     color: #030000;
+    text-align: center;
+    margin-bottom: 16px;
 }
 
-.postContent{
+.postContent p{
     margin: 0 11px 28px 20px;
     color: #363457;
     font-weight: 400;
@@ -198,12 +194,46 @@ main{
         height: 127px;
     }
 
+    .createPost button{
+        width: 152px;
+        margin-right: 400px;
+        margin-top: 50px;
+    }
+
     .createPost button::before{
         content: "Postar";
     }
 
     .userLogado, .othersUsers{
+        display: flex;
+        flex-wrap: wrap;
         width: 746px;
         height: 231px;
+    }
+
+    .userLogado > img, .othersUsers > img{
+        margin: 31px 0 0 26px;
+        width: 122px;
+        height: 115px;
+    }
+
+    .postContent{
+        margin-left: 44px;
+        width: 419px;
+    }
+
+    .postContent > h2, .postContent > h2 {
+        text-align: start;
+        margin: 35px 0 15px 0;
+    }
+
+    .date{
+        margin: 197px 23px 16px 0;
+    }
+
+    .userEdit{
+        position: absolute;
+        margin-top: 170px;
+        margin-left: 30px;
     }
  }
