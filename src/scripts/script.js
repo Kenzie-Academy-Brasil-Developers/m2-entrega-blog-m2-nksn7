@@ -1,4 +1,5 @@
 import Logout from "./Logout.js"
+// import RenderPosts from "./RenderPosts.js"
 class Api {
     
     static baseUrl = "https://blog-m2.herokuapp.com"
@@ -8,12 +9,16 @@ class Api {
         Authorization: `Bearer: ${this.token}`             
         }
     static async listarClientes(){
-        // const listaDeClientes = await fetch("https://atividade-api-clientes.herokuapp.com/clientes")
-        // .then((response) => response.json())
-        // .then((response) => {return response})
-        // .catch((err) => console.log('This is the error' + err))
+        const listaDeClientes = await fetch(`${this.baseUrl}/posts`, {
+          method: "GET",
+          headers: this.headers,
+        })
+        .then((response) => response.json())
+        .then((response) => response)
+        .catch((err) => console.log('This is the error' + err))
 
-        // return listaDeClientes
+      
+        return listaDeClientes
     }
 
     static async loginClientes(body){
