@@ -12,6 +12,10 @@ header{
     width: 100%;
 }
 
+header button{
+    margin-right: 20px;
+}
+
 .user{
     display: flex;
     flex-direction: row;
@@ -23,7 +27,6 @@ header{
 button{
     width: 128px;
     height: 38px;
-    margin-right: 20px;
     background: #5C5D8D;
     border-radius: 20px;
     font-weight: 700;
@@ -64,7 +67,7 @@ main{
 .createPost{
     display: flex;
     justify-content: center;
-    margin: 40px 0 60px 0;
+    margin: 40px 0 0 0;
 }
 
 .createPost input{
@@ -77,15 +80,21 @@ main{
     border: none;
 }
 
-.createPost button{
+.createPostBtn{
+    display: flex;
+    justify-content: flex-end;
+    width: 381px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.createPostBtn button{
     background: #5C5D8D;
     border-radius: 20px;
     width: 75px;
     height: 33px;
     color: #ECF0F1;
-    position: absolute;
-    top: 195.36px;
-    right: 5px;
+    margin-right: 0;
 }
 
 .posts{
@@ -173,6 +182,10 @@ main{
 
 
  @media (min-width: 1024px){
+    header button{
+        margin-right: 128px;
+    }
+
     .user{
         width: 300px;
         margin-left: 128px;
@@ -188,7 +201,7 @@ main{
     }
 
     .createPost{
-        margin: 74px 0 98px 0;
+        margin: 74px 0 0 0;
     }
 
     .createPost input{
@@ -196,13 +209,17 @@ main{
         height: 127px;
     }
 
-    .createPost button{
+    .createPostBtn{
+        width: 746px;
+        margin-bottom: 62px;
+        margin-top: 5px;
+    }
+    
+    .createPostBtn button{
         width: 152px;
-        margin-right: 400px;
-        margin-top: 50px;
     }
 
-    .createPost button::before{
+    .createPostBtn button::before{
         content: "Postar";
     }
 
