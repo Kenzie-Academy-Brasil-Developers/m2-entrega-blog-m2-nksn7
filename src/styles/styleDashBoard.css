@@ -31,6 +31,7 @@ button{
     line-height: 19px;
     color: #ECF0F1;
     border: none;
+    cursor: pointer;
 }
 
 .user img{
@@ -154,6 +155,7 @@ main{
 .userEdit img{
     width: 43.12px;
     height: 42px;
+    cursor: pointer;
 }
 
 .userEdit img:first-child{
