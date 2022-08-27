@@ -38,6 +38,7 @@ class RenderPosts {
                 imgLapis.src = "../img/edit 1.png"
                 imgLixeira.src = "../img/trash-bin 1.png"
                 imgLixeira.classList.add(`${element.id}`)
+                imgLapis.classList.add(`${element.id}`)
                 divEdit.append(imgLapis,imgLixeira)
                 divPrincipal.append(img, divPost, span, divEdit)
             } else{
