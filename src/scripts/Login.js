@@ -22,7 +22,7 @@ class Login {
             
             emailInput.value = ""
             passwordInput.value = ""
-            await Api.loginClientes(data)
+            await Api.loginUsuario(data)
         })
     }
 }

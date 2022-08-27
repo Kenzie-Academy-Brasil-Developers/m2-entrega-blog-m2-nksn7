@@ -24,7 +24,7 @@ class Cadastro {
             email.value = ""
             avatarUrl.value = ""
             password.value = ""
-            await Api.cadastrarCliente(data)
+            await Api.cadastrarUsuario(data)
             console.log(data)
         })
     }

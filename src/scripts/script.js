@@ -8,8 +8,8 @@ class Api {
         "Content-Type": "application/json", 
         Authorization: `Bearer: ${this.token}`             
         }
-    static async listarClientes(){
-        const listaDeClientes = await fetch(`${this.baseUrl}/posts`, {
+    static async listarPosts(){
+        const listaDePosts = await fetch(`${this.baseUrl}/posts`, {
           method: "GET",
           headers: this.headers,
         })
@@ -18,10 +18,10 @@ class Api {
         .catch((err) => console.log('This is the error' + err))
 
       
-        return listaDeClientes
+        return listaDePosts
     }
 
-    static async loginClientes(body){
+    static async loginUsuario(body){
         const userLogin = await fetch(`${this.baseUrl}/users/login`,{
             method: "POST",
             headers: this.headers,
@@ -38,8 +38,8 @@ class Api {
           return userLogin
     }
 
-    static async cadastrarCliente(body){
-        const cliente = await fetch(`${this.baseUrl}/users/register`, {
+    static async cadastrarUsuario(body){
+        const Usuario = await fetch(`${this.baseUrl}/users/register`, {
             method: "POST",
             headers: this.headers,
             body: body
@@ -48,30 +48,45 @@ class Api {
           .then(res =>  res)
           .catch(err => console.log(err))
       
-          return cliente
+          return Usuario
     }
 
-    static async editarCliente(id, body){
-        const clienteEditado = await fetch(`${this.baseUrl}/posts/${id}`, {
+    static async criarPost(body) {
+      const novoPost = await fetch(`${this.baseUrl}/posts`, {
+        method: "POST",
+        headers: this.headers,
+        body: body
+      })
+      .then(res => res.json())
+      .then(res =>  res)
+      .catch(err => console.log(err))
+
+      return novoPost
+    }
+
+    static async editarPost(id, body){
+        const UsuarioEditado = await fetch(`${this.baseUrl}/posts/${id}`, {
             method: "PATCH",
-            headers: {"Content-Type": "application/json"},
+            headers: this.headers,
             body: body
         })
         .then(res => res.json())
+        .then(res =>  res)
         .catch(err => console.log(err))
     
-        return clienteEditado
+        return UsuarioEditado
         
     }
 
-    static async deletarCliente(id){
+    static async deletarPost(id){
       await fetch(`${this.baseUrl}posts/${id}`, {
         method: "DELETE",
-        headers: {"Content-Type": "application/json"}
+        headers: this.headers
     })
     .catch(err => console.log(err))
     }
 
 }
+
 
 export default Api

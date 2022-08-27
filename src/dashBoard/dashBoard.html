@@ -16,19 +16,19 @@
 <body>
     <header>
         <div class="user">
-            <img src=".././img/image 2.png" alt="Esquilo">
-            <p>Esquilinho fofo</p>
+            <!-- <img id="fotoPerfil" src="" alt="Imagem do Perfil">
+            <p id="nomeUsuario"></p> -->
         </div>
         <button id="btnLogout">Logout</button>
     </header>
 
     <main>
         <section class="createPost">
-            <input type="text" placeholder="No que está pensando?">
+            <input id="novoPost" type="text" placeholder="No que está pensando?">
         </section>
         
         <div class="createPostBtn">
-            <button>+</button>
+            <button id="btnPostar">+</button>
         </div>
 
         <section class="posts">
@@ -60,7 +60,7 @@
                 <span class="date"> 22/08/2022</span>
             </div> -->
 
-            <div id="152" class="userLogado">
+            <!-- <div id="152" class="userLogado">
                 <img src=".././img/image 2.png" alt="Esquilo">
                 
                 <div class="postContent">
@@ -74,7 +74,7 @@
                     <img class="lapis" src="../img/edit 1.png" alt="lapis">
                     <img class="lixeira" src="../img/trash-bin 1.png" alt="Lixeira">
                 </div>
-            </div>
+            </div> -->
 
             <!-- <div class="othersUsers">
 
@@ -97,10 +97,10 @@
                      <h2>Editar</h2>
                  </li>
                  <li>
-                     <input type="text" placeholder="Editando meu comentário...">
+                     <input id="editPost" type="text" placeholder="Editando meu comentário...">
                  </li>
                  <li>
-                     <button>Enviar</button>
+                     <button id="btnEditarPost">Enviar</button>
                  </li>
             </div>
          </ul>
@@ -122,5 +122,7 @@
     <script type="module" src="../scripts/Modais.js"></script>
     <script type="module" src="../scripts/DeletePoster.js"></script>
     <script type="module" src="../scripts/CreatePoster.js"></script>
+    <script type="module" src="../scripts/EditPoster.js"></script>
+    <script type="module" src="../scripts/Perfil.js"></script>
 </body>
 </html>
