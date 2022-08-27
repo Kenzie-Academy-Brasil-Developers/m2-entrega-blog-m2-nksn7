@@ -5,6 +5,7 @@ class RenderPosts {
 
     static renderizandoPosts(arr) {
         let section = document.querySelector(".posts")
+        let retornandoDivPrincipal = 0
         arr.forEach(element => {
             let auxData = element.createdAt
             let dataFormatada = `${auxData.slice(8,10)}/${auxData.slice(5,7)}/${auxData.slice(0,4)}`
@@ -15,7 +16,7 @@ class RenderPosts {
             let p = document.createElement("p")
             let span = document.createElement("span")
 
-            divPrincipal.classList.add("userLogado")
+            divPrincipal.classList.add("othersUsers")
             img.src = `${element.user.avatarUrl}`
             img.alt = `Imagem de perfil de ${element.user.username}`
             divPost.classList.add("postContent")
@@ -26,10 +27,12 @@ class RenderPosts {
 
             divPost.append(h2, p)
             divPrincipal.append(img, divPost, span)
+            retornandoDivPrincipal = divPrincipal
             section.appendChild(divPrincipal)
         });
-
+        return retornandoDivPrincipal
     }
 }
 RenderPosts.renderizandoPosts(retornoApi.data)
-// export default RenderPosts
+
+export default RenderPosts

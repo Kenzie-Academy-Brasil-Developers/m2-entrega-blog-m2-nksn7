@@ -5,7 +5,7 @@ class Modais {
      let idUsuario = ""
      botaoDelete.forEach(e => {
        e.addEventListener('click', ()=>{
-        idUsuario = e.id
+       idUsuario = e.classList[1]
        ulModalDelete.classList.toggle('hidden')
        })})
        return idUsuario
