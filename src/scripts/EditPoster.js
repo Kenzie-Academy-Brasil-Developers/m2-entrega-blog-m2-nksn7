@@ -6,7 +6,7 @@ let idUsuario = Modais.abreModalEdit()
 class EditPoster {
 
     static editandoPost() {
-        let ulModalDelete = document.getElementById('deleteModal')
+        let ulModalEdit = document.getElementById('editModal')
         const editPost = document.getElementById("editPost")
         const btnEditarPost = document.getElementById("btnEditarPost")
 
@@ -18,9 +18,9 @@ class EditPoster {
                 "content": editPost.value                
             })
 
-            editPost.value = ""
             await Api.editarPost(idUsuario,body)
-            ulModalDelete.classList.toggle('hidden')
+            editPost.value = ""
+            ulModalEdit.classList.toggle('hidden')
             window.location.reload()
         })
     }
