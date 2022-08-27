@@ -13,6 +13,9 @@ class Cadastro {
             let avatarUrl = document.querySelector(".avatarUrl")
             let password = document.querySelector(".password")
 
+            localStorage.setItem('ImagemUsuario', `${avatarUrl.value}`)
+            localStorage.setItem('NoemUsuario', `${username.value}`)
+
             let data =JSON.stringify({
                 "username": `${username.value}`,
                 "email": `${email.value}`,
