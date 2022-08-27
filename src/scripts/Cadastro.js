@@ -28,7 +28,6 @@ class Cadastro {
             avatarUrl.value = ""
             password.value = ""
             await Api.cadastrarUsuario(data)
-            console.log(data)
         })
     }
 

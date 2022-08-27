@@ -79,7 +79,7 @@ class Api {
     }
 
     static async deletarPost(id){
-      await fetch(`${this.baseUrl}posts/${id}`, {
+      await fetch(`${this.baseUrl}/posts/${id}`, {
         method: "DELETE",
         headers: this.headers
     })
