@@ -1,0 +1,106 @@
+.modal {
+    background-color: #00000090;
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixaModal{
+    display: flex;
+    flex-direction: column;
+    background-color: #6495ED;
+    align-items: center;
+    width: 285px;
+    height: 331px;
+    border-radius: 10px;
+}
+
+.caixaModal li h2{
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 42px;
+    color: #FFFFFF;
+    text-shadow: 
+               -1px -1px 0px #000000, 
+               -1px 1px 0px #000000,                    
+                1px -1px 0px #000000,                  
+                1px 0px 0px #000000;
+    margin-bottom: 16px;
+    margin-top: 19px;
+}
+
+.caixaModal li input{
+    width: 239px;
+    height: 120px;
+    background: #FFFFFF;
+    border: 1px solid #454D6B;
+    border-radius: 10px;
+}
+
+::-webkit-input-placeholder{ 
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #363457;
+ }
+
+ .caixaModal li button{
+    width: 152px;
+ }
+
+ #editModal .caixaModal{
+    gap: 30px;
+ }
+
+ .caixaModal2{
+    display: flex;
+    flex-direction: column;
+    background-color: #6495ED;
+    align-items: center;
+    width: 381px;
+    height: 176px;
+    border-radius: 10px;
+}
+
+.caixaModal2 li h2{
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    color: #FFFFFF;
+    text-shadow: 
+               -1px -1px 0px #000000, 
+               -1px 1px 0px #000000,                    
+                1px -1px 0px #000000,                  
+                1px 0px 0px #000000;
+    margin-top: 51px;
+    margin-bottom: 25px;
+}
+
+.caixaModal2 li button{
+    width: 152px;
+    background: #FF3F5B;
+ }
+
+.hidden {
+    display: none;
+}
+
+ @media (min-width: 1024px){
+    .caixaModal{
+        width: 430px;
+        height: 331px;
+    }
+
+    .caixaModal li button, .caixaModal2 li button{
+        margin-left: 139px;
+    }
+
+    .caixaModal2{
+        width: 430px;
+        height: 176px; 
+    }
+ }

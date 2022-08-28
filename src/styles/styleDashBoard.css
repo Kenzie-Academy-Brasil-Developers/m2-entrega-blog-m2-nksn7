@@ -1,0 +1,276 @@
+body{
+    background: #454D6B;
+}
+
+header{
+    background-color: #6495ED;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    width: 100%;
+}
+
+header button{
+    margin-right: 20px;
+}
+
+header  img{
+    border-radius: 100px;
+}
+
+.user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 177px;
+    margin-left: 20px;
+}
+
+button{
+    width: 128px;
+    height: 38px;
+    background: #5C5D8D;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ECF0F1;
+    border: none;
+    cursor: pointer;
+}
+
+.user img{
+    width: 68px;
+    height: 66px;
+    margin-right: 9px;
+}
+
+.user p{
+    width: 109px;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-shadow: 
+               -1px -1px 0px #000000, 
+               -1px 1px 0px #000000,                    
+                1px -1px 0px #000000,                  
+                1px 0px 0px #000000;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.createPost{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 0 0;
+}
+
+.createPost input{
+    width: 381px;
+    height: 108.98px;
+    left: 20px;
+    top: 122px;
+    background: #ECF0F1;
+    border-radius: 20px;
+    border: none;
+}
+
+.createPostBtn{
+    display: flex;
+    justify-content: flex-end;
+    width: 381px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    transform: translateY(-48px);
+}
+
+.createPostBtn button{
+    background: #5C5D8D;
+    border-radius: 20px;
+    width: 75px;
+    height: 33px;
+    color: #ECF0F1;
+    margin-right: 24px;
+}
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 20px;
+}
+
+.userLogado{
+    background: #ECF0F1;
+    border-radius: 20px;
+    width: 381px;
+    height: 364px;
+}
+
+.othersUsers{
+    background: #ECF0F1;
+    border-radius: 20px;
+    width: 381px;
+    height: 312px;
+}
+
+.userLogado > img, .othersUsers > img{
+    margin: 13px 144.88px 0 155.7px;
+    width: 69px;
+    height: 69px;
+    border-radius: 100px;
+}
+
+.postContent > h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #030000;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.postContent p{
+    margin: 0 11px 28px 20px;
+    color: #363457;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    width: 349px;
+    height: 112px;
+    overflow: hidden;
+}
+
+.date{
+    margin-left: 148px;
+    width: 102.7px;
+    height: 18px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #363457;
+}
+
+.userEdit{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 13px;
+    margin-top: 28px;
+}
+
+.userEdit img{
+    width: 43.12px;
+    height: 42px;
+    cursor: pointer;
+}
+
+.userEdit img:first-child{
+    height: 46px;
+    width: 48.27px;
+}
+
+::-webkit-input-placeholder{ 
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #363457;
+    padding-left: 20px;
+ }
+
+
+ @media (min-width: 1024px){
+    header button{
+        margin-right: 128px;
+    }
+
+    .user{
+        width: 300px;
+        margin-left: 128px;
+    }
+    .user p{
+        width: 160px;
+        overflow: visible;
+    }
+
+    button{
+        width: 152px;
+        margin-right: 128px;
+    }
+
+    .createPost{
+        margin: 74px 0 0 0;
+    }
+
+    .createPost input{
+        width: 746px;
+        height: 127px;
+    }
+
+    .createPostBtn{
+        width: 746px;
+        margin-bottom: 62px;
+        margin-top: 5px;
+    }
+    
+    .createPostBtn button{
+        width: 152px;
+        font-size: 0;
+    }
+
+    .createPostBtn button::before{
+        display: flex;
+        justify-content: center;
+        content: "Postar";
+        font-size: 16px;
+        padding-top: 6px;
+    }
+
+    .userLogado, .othersUsers{
+        display: flex;
+        flex-wrap: wrap;
+        width: 746px;
+        height: 231px;
+    }
+
+    .userLogado > img, .othersUsers > img{
+        margin: 31px 0 0 26px;
+        width: 122px;
+        height: 115px;
+    }
+
+    .postContent{
+        margin-left: 44px;
+        width: 419px;
+    }
+
+    .postContent p{
+        width: 419px;
+        height: 123px;
+    }
+
+    .postContent > h2{
+        text-align: start;
+        margin: 35px 0 15px 0;
+    }
+
+    .date{
+        margin: 197px 23px 16px 0;
+    }
+
+    .userEdit{
+        position: absolute;
+        margin-top: 170px;
+        margin-left: 30px;
+    }
+ }
