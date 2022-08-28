@@ -90,7 +90,7 @@ main{
     width: 381px;
     margin: 0 auto;
     margin-bottom: 30px;
-    transform: translateY(-50px);
+    transform: translateY(-48px);
 }
 
 .createPostBtn button{
@@ -225,10 +225,15 @@ main{
     
     .createPostBtn button{
         width: 152px;
+        font-size: 0;
     }
 
     .createPostBtn button::before{
+        display: flex;
+        justify-content: center;
         content: "Postar";
+        font-size: 16px;
+        padding-top: 6px;
     }
 
     .userLogado, .othersUsers{
