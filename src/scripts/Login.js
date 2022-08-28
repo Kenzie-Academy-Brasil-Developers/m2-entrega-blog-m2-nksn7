@@ -19,10 +19,10 @@ class Login {
                 "email": emailInput.value,
                 "password": passwordInput.value
             })
-            
+        
+            await Api.loginUsuario(data)
             emailInput.value = ""
             passwordInput.value = ""
-            await Api.loginUsuario(data)
         })
     }
 }
